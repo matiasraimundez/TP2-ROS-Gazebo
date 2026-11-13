@@ -52,7 +52,7 @@ def generate_launch_description():
     use_composition = LaunchConfiguration('use_composition')
     use_respawn = LaunchConfiguration('use_respawn')
 
-    world = '~/Documents/robotica/resources/tb3_empty_world/worlds/tb3_sandbox.sdf.xacro'
+    world = '../worlds/tb3_sandbox.sdf.xacro'
 
     # Launch configuration variables specific to simulation
     rviz_config_file = LaunchConfiguration('rviz_config_file')

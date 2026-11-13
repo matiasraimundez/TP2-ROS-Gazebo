@@ -1,11 +1,11 @@
 import csv
 import matplotlib.pyplot as plt
 
-path = 'log_ej4.txt'
+path = 'logs/log_ej7_4.txt'
 
 with open(path, newline='') as log:
     log_reader = csv.reader(log, delimiter='\t')
-    
+
     time = []
     pos_x = []
     pos_y = []
@@ -28,13 +28,14 @@ with open(path, newline='') as log:
 
     plt.figure(figsize=(8, 8))
     plt.plot(pos_x, pos_y, label='Recorrido', linewidth=1)
+    plt.scatter(0, 0, color='red', s=100, marker='<')
     plt.xlabel('x [m]')
     plt.ylabel('y [m]')
     plt.title('Camino del robot')
     plt.legend()
     plt.axis('equal')
     plt.grid(True)
-    plt.savefig('ej5/a-camino.png', dpi=150, bbox_inches='tight')
+    plt.savefig('ej7/7-4-camino.png', dpi=150, bbox_inches='tight')
 
     fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(4, 10))
     plt.subplots_adjust(hspace=0.3)
@@ -60,7 +61,7 @@ with open(path, newline='') as log:
     ax3.legend()
     ax3.grid(True)
 
-    fig.savefig('ej5/b-trayectoria.png', dpi=150, bbox_inches='tight')
+    fig.savefig('ej7/7-4-trayectoria.png', dpi=150, bbox_inches='tight')
 
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(4, 8))
     plt.subplots_adjust(hspace=0.3)
@@ -79,4 +80,4 @@ with open(path, newline='') as log:
     ax2.legend()
     ax2.grid(True)
 
-    fig.savefig('ej5/c-velocidad.png', dpi=150, bbox_inches='tight')
+    fig.savefig('ej7/7-4-velocidad.png', dpi=150, bbox_inches='tight')
