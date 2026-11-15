@@ -12,8 +12,9 @@ Para teleoperación por teclado ejecutar:
 
 Para enviar comandos de velocidad ejecutar:
 
-```ros2 topic pub --rate 1 /cmd_vel geometry_msgs/msg/TwistStamped "twist: {linear: {x: 0.2, y:
-0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.2}}"```
+```
+ros2 topic pub --rate 1 /cmd_vel geometry_msgs/msg/TwistStamped "twist: {linear: {x: 0.2, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.2}}"
+```
 
 Para registrar los datos de una ejecución en `logs/log.txt` ejecutar:
 
